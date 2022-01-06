@@ -1,0 +1,306 @@
+* {
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EFF7FD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navBar {
+    width: 100vw;
+    height: 5.9vh;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(214, 214, 214, 0.25);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.navBar div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(4px 4px 5px #7ac3f7);
+}
+
+.navBar div .one {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 53px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+.navBar div .two {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 53px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #1A8FE3;
+}
+
+.navBar div .three {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 53px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    margin-left: 20px;
+}
+
+
+/* --------------------------------------------------------------------------------------- */
+
+.cardContainer {
+    height: 67.3vh;
+    margin-top: 7.2vh;
+    width: 84.3vw;
+    background: #FFFEFE;
+    border-radius: 5px;
+    /* ######### */
+    display: grid;
+    grid-template-columns: 14.3vh 14.3vh 14.3vh 14.3vh;
+    align-items: center;
+    justify-content: space-around;
+    justify-items: center;
+}
+
+.cards {
+    height: 29.4vh;
+    width: 14.3vw;
+    background: #FFFFFF;
+    box-shadow: 2px 2px 10px #BBE1FD;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.cards p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #37548A;
+}
+
+.cards input {
+    margin-top: 35px;
+    border: none;
+    border-bottom: 3px solid #BED5FF;
+    width: 80%;
+    transition: 0.05s;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.cards input:focus {
+    outline: none;
+    border: none;
+    border-bottom: 3px solid #120ef5;
+    transform: scale(1.1);
+}
+
+.model {
+    background-color: #579aff;
+}
+
+.model p {
+    color: white;
+}
+
+.model input {
+    font-size: 17px;
+    background: #ffffff;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+}
+
+select {
+    margin-top: 2vh;
+    width: 70%;
+    height: 15%;
+    border: none;
+    background-color: #FFFFFF;
+    border: 1px solid #BED5FF;
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.05s;
+}
+
+select:active {
+    outline: none;
+    transform: scale(1.05);
+    font-size: 20px;
+}
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+.predictBtn {
+    margin-top: 2.59vh;
+    height: 11.5vh;
+    width: 30.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.05s;
+}
+
+.predictBtn div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.predictBtn div button {
+    border: none;
+    background-color: rgb(29, 29, 80);
+    border-radius: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+    width: 80%;
+    margin-top: 2vh;
+    padding: 10px 20px 10px;
+    margin-bottom: 3vh;
+}
+
+.predictBtn:hover {
+    border-radius: 20px;
+    transform: scale(1.05);
+}
+
+.out {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 5vh; */
+    background: #37548A;
+    color: white;
+    box-shadow: 2px 2px 10px #BBE1FD;
+    height: 10vh;
+    width: 50vh;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+}
+
+.results {
+    height: 20.3vh;
+    margin-top: 4.2vh;
+    width: 74.3vw;
+    background: #FFFEFE;
+    /* background-color: tomato; */
+    border-radius: 5px;
+    /* ######### */
+    display: grid;
+    grid-template-columns: 40vw 60vw;
+    align-items: flex-start;
+    justify-content: left;
+    /* margin-bottom: 5vh; */
+}
+
+
+/* Adding responsivness  */
+
+@media only screen and (max-width: 1250px) {
+    /* body {
+        background-color: lightblue;
+    } */
+    .cardContainer {
+        display: grid;
+        grid-template-columns: 34.3vh;
+        align-items: center;
+        justify-content: space-around;
+        justify-items: center;
+        overflow-y: scroll;
+    }
+    .cards {
+        width: 80vw;
+        margin: 10px;
+    }
+     ::-webkit-scrollbar {
+        width: 0;
+        /* Remove scrollbar space */
+        background: transparent;
+        /* Optional: just make scrollbar invisible */
+    }
+    /* Optional: show position indicator in red
+     ::-webkit-scrollbar-thumb {
+        background: #FF0000;
+    } */
+    .results {
+        display: grid;
+        grid-template-columns: 34.3vh;
+        align-items: center;
+        justify-content: space-around;
+        justify-items: center;
+        overflow-y: scroll;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    /* body {
+        background-color: rgb(19, 114, 146);
+    } */
+    .predictBtn div button {
+        font-size: 18px;
+    }
+    .predictBtn {
+        height: 100px;
+        width: 250px;
+    }
+    .navBar div .three {
+        font-size: 25px;
+    }
+    .navBar div .two {
+        font-size: 25px;
+    }
+    .navBar div .one {
+        font-size: 25px;
+    }
+    img {
+        height: 100px;
+    }
+}
