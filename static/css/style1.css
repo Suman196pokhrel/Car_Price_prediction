@@ -71,12 +71,24 @@ body {
 }
 
 
+/* ------------------------------------------------------------------------------------------------------ */
+
+.header1 {
+    margin-top: 3.2vh;
+    color: rgb(136, 158, 230);
+    border-radius: 5px;
+    width: 80vw;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+
 /* --------------------------------------------------------------------------------------- */
 
 .cardContainer {
-    height: 67.3vh;
-    margin-top: 7.2vh;
-    width: 84.3vw;
+    height: 57.3vh;
+    margin-top: 1.2vh;
+    width: 80.3vw;
     background: #FFFEFE;
     border-radius: 5px;
     /* ######### */
@@ -88,7 +100,7 @@ body {
 }
 
 .cards {
-    height: 29.4vh;
+    height: 25vh;
     width: 14.3vw;
     background: #FFFFFF;
     box-shadow: 2px 2px 10px #BBE1FD;
@@ -100,10 +112,11 @@ body {
 }
 
 .cards p {
+    margin-top: 3vh;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 28px;
     display: flex;
     align-items: center;
@@ -112,7 +125,7 @@ body {
 }
 
 .cards input {
-    margin-top: 35px;
+    margin-top: 3vh;
     border: none;
     border-bottom: 3px solid #BED5FF;
     width: 80%;
@@ -128,26 +141,36 @@ body {
     transform: scale(1.1);
 }
 
+.cards img {
+    height: 70px;
+}
+
 .model {
+    margin-top: 2vh;
+    border-radius: 20px;
     background-color: #579aff;
+    height: 13vh;
+    width: 18vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.model img {
+    height: 85px;
 }
 
 .model p {
     color: white;
-}
-
-.model input {
-    font-size: 17px;
-    background: #ffffff;
-    border-radius: 10px;
-    color: rgb(0, 0, 0);
-    padding: 10px 20px 10px 20px;
-    cursor: pointer;
+    font-weight: 800;
+    font-size: 20px;
 }
 
 select {
     margin-top: 2vh;
-    width: 70%;
+    width: 100%;
     height: 15%;
     border: none;
     background-color: #FFFFFF;
@@ -159,8 +182,18 @@ select {
 
 select:active {
     outline: none;
-    transform: scale(1.05);
-    font-size: 20px;
+    font-size: 17px;
+}
+
+.prmBtn {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgb(220, 231, 255);
+    border: none;
+    height: 50%;
+    width: 100%;
+    font-size: 15px;
+    cursor: pointer;
 }
 
 
@@ -266,10 +299,6 @@ select:active {
         background: transparent;
         /* Optional: just make scrollbar invisible */
     }
-    /* Optional: show position indicator in red
-     ::-webkit-scrollbar-thumb {
-        background: #FF0000;
-    } */
     .results {
         display: grid;
         grid-template-columns: 34.3vh;
@@ -277,6 +306,18 @@ select:active {
         justify-content: space-around;
         justify-items: center;
         overflow-y: scroll;
+    }
+    .model {
+        padding: 10px;
+    }
+    .model img {
+        height: 55px;
+        display: none;
+    }
+    .model p {
+        color: white;
+        font-weight: 800;
+        font-size: 20px;
     }
 }
 

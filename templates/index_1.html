@@ -22,73 +22,92 @@
         </div>
     </div>
 
+    <div class="header1">
+        Fill out the car details
+    </div>
     <!-- ------------------------------------------------------------------------------------------------------------ -->
-    <form action="{{ url_for('predict')}}" id="my-form" method="post" class="cardContainer">
+    <form action="{{ url_for('predict')}}" id="my-form" method="post">
+        <div class="cardContainer">
 
-        <div class="cards">
-            <img src="../static/bx_bx-time-five.svg" alt="">
-            <p>Year Bought</p>
-            <input id="first" name="Year" type="number ">
-        </div>
-        <div class="cards">
-            <img src="../static/ic_outline-price-change.svg" alt="">
-            <p>Showroom Price</p>
-            <input id="second" name="Present_Price" required="required">
-        </div>
 
-        <div class="cards">
-            <img src="../static/healthicons_paved-road.svg" alt="">
-            <p>Km's Travelled</p>
-            <input id="third" name="Kms_Driven" required="required">
-        </div>
-        <div class="cards">
-            <img src="../static/clarity_users-solid.svg" alt="">
-            <p>No. Of Prev Drivers</p>
-            <input id="fourth" name="Owner" required="required">
-        </div>
-        <div class="cards">
-            <img src="../static/mdi_fuel.svg" alt="">
-            <p>Fuel Type</p>
-            <select name="Fuel_Type_Petrol" id="fuel" required="required">
+            <div class="cards">
+                <img src="../static/bx_bx-time-five.svg" alt="">
+                <p>Year Bought</p>
+                <input id="first" name="Year" type="number ">
+            </div>
+            <div class="cards">
+                <img src="../static/ic_outline-price-change.svg" alt="">
+                <p>Showroom Price</p>
+                <input id="second" name="Present_Price" required="required">
+            </div>
+
+            <div class="cards">
+                <img src="../static/healthicons_paved-road.svg" alt="">
+                <p>Km's Travelled</p>
+                <input id="third" name="Kms_Driven" required="required">
+            </div>
+            <div class="cards">
+                <img src="../static/clarity_users-solid.svg" alt="">
+                <p>No. Of Prev Drivers</p>
+                <input id="fourth" name="Owner" required="required">
+            </div>
+            <div class="cards">
+                <img src="../static/mdi_fuel.svg" alt="">
+                <p>Fuel Type</p>
+                <select name="Fuel_Type_Petrol" id="fuel" required="required">
                <option value="Petrol">Petrol</option>
                <option value="Diesel">Diesel</option>
                <option value="Diesel">CNG</option>
           </select>
-        </div>
-        <div class="cards">
-            <img src="../static/map_car-dealer.svg" alt="">
-            <p>Dealer/Indivisual</p>
-            <select name="Seller_Type_Individual" id="resea" required="required">
+            </div>
+            <div class="cards">
+                <img src="../static/map_car-dealer.svg" alt="">
+                <p>Dealer/Indivisual</p>
+                <select name="Seller_Type_Individual" id="resea" required="required">
                     <option value="Dealer">Dealer</option>
                     <option value="Individual">Individual</option>
                </select>
-        </div>
-        <div class="cards">
-            <img src="../static/bi_gear-fill.svg" alt="">
-            <p>Transmission Type</p>
-            <select name="Transmission_Mannual" id="research" required="required">
+            </div>
+            <div class="cards">
+                <img src="../static/bi_gear-fill.svg" alt="">
+                <p>Transmission Type</p>
+                <select name="Transmission_Mannual" id="research" required="required">
                <option value="Mannual">Manual Car</option>
                <option value="Automatic">Automatic Car</option>
           </select>
-        </div>
-        <!-- <div class="cards model">
-            <img src="../static/Group-2.svg" alt=" ">
-            <p>Year Bought</p>
-            <input type="button " value="Random Forest Regressor ">
+            </div>
 
-        </div> -->
+
+        </div>
+
+        <div class="model">
+            <img src="../static/Group-2.svg" alt=" ">
+            <div>
+                <p>Select Your ML Model</p>
+                <select name="Fuel_Type_Petrol" id="fuel">
+                        <option value="Petrol">Linear Regression</option>
+                        <option value="Diesel">Random Forest Regressor</option>
+                        <option value="Diesel">Others</option>
+                </select>
+            </div>
+
+
+
+        </div>
+
+        <div class="model">
+
+            <img src="../static/ion_rocket-2.svg " alt=" ">
+            <button form="my-form" class='prmBtn' id="sub" type="submit ">Calculate the Selling Price</button>
+
+        </div>
 
     </form>
 
-    <div class="results">
-        <div class="predictBtn">
-            <div>
-                <img src="../static/ion_rocket.svg " alt=" ">
-                <button form="my-form" id="sub" type="submit ">Calculate the Selling Price</button>
-            </div>
-        </div>
+    <div class="out">
+
         {% if prediction_text%}
-        <p class="out">{{ prediction_text }}
+        <p>{{ prediction_text }}
             <p>
 
                 {% endif %}
