@@ -9,7 +9,11 @@ from sklearn.preprocessing import StandardScaler
 
 # Initializing the Flask app
 app = Flask(__name__)
-model = pickle.load(open(r'random_forest_regression_model.pkl', 'rb'))
+
+
+# Initiating the ML models
+model_linearReg = pickle.load(open(r"linear_regression_model.pkl",'rb'))
+model_randomForReg = pickle.load(open(r'random_forest_regression_model.pkl', 'rb'))
 
 # creating routs for App
 
@@ -51,15 +55,43 @@ def predict():
                Transmission_Mannual = 1
           else:
                Transmission_Mannual = 0
-          prediction = model.predict([[Present_Price, Kms_Driven2, Owner, Year, Fuel_Type_Diesel,
-                                   Fuel_Type_Petrol, Seller_Type_Individual, Transmission_Mannual]])
-          output = round(prediction[0], 2)
-          if output < 0:
-               return render_template('index_1.html', prediction_text="Sorry you cannot sell this car")
-          else:
-               return render_template('index_1.html', prediction_text="You Can Sell The Car at {}".format(output))
+
+          selected_model = request.form['Model_Type']
+
+          # COnditioning For Machine Learning Models 
+
+
+          # For Random Regressor 
+          if selected_model=='Random Forest Regressor':
+               print("INside the RANDOMREGRESSOR")
+               prediction = model_randomForReg.predict([[Present_Price, Kms_Driven2, Owner, Year, Fuel_Type_Diesel,Fuel_Type_Petrol, Seller_Type_Individual, Transmission_Mannual]])
+               output = round(prediction[0], 2)
+               
+
+               if output < 0:
+                    return render_template('index_1.html', prediction_text="Sorry you cannot sell this car")
+               else:
+                    return render_template('index_1.html', prediction_text="RandomForestRegressor estimated that you Can Sell The Car at {}".format(output))
+          
+          # For Linear Regressor
+          
+          elif selected_model == 'Linear Regression':
+               print("INside the LINEARREGRESSOR")
+               params = [[Present_Price, Kms_Driven2, Owner, Year, Fuel_Type_Diesel,Fuel_Type_Petrol, Seller_Type_Individual, Transmission_Mannual]]
+               print("PARAMS ARE ::==>> ", params)
+               prediction = model_linearReg.predict(params).tolist()
+               output = round(prediction[0][0], 2)
+
+               
+               if output < 0:
+                    return render_template('index_1.html', prediction_text="Sorry you cannot sell this car")
+               else:
+                    return render_template('index_1.html', prediction_text="Linear Regressor estimated that you Can Sell The Car at {}".format(output))
+     
      else:
           return render_template('index_1.html')
+
+          
 
 
 if __name__ == '__main__':
