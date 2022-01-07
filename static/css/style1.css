@@ -290,7 +290,7 @@ select:active {
         overflow-y: scroll;
     }
     .cards {
-        width: 80vw;
+        width: 60vw;
         margin: 10px;
     }
      ::-webkit-scrollbar {
@@ -343,5 +343,9 @@ select:active {
     }
     img {
         height: 100px;
+    }
+    .model {
+        height: 130px;
+        width: 200px;
     }
 }
