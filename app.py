@@ -71,7 +71,7 @@ def predict():
                if output < 0:
                     return render_template('index_1.html', prediction_text="Sorry you cannot sell this car")
                else:
-                    return render_template('index_1.html', prediction_text="RandomForestRegressor estimated that you Can Sell The Car at {}".format(output))
+                    return render_template('index_1.html', prediction_text="you Can Sell The Car at {}".format(output))
           
           # For Linear Regressor
           
@@ -86,7 +86,7 @@ def predict():
                if output < 0:
                     return render_template('index_1.html', prediction_text="Sorry you cannot sell this car")
                else:
-                    return render_template('index_1.html', prediction_text="Linear Regressor estimated that you Can Sell The Car at {}".format(output))
+                    return render_template('index_1.html', prediction_text="you Can Sell The Car at {}".format(output))
      
      else:
           return render_template('index_1.html')
