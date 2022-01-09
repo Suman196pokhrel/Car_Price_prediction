@@ -13,7 +13,7 @@ The pickele file is them simply used by the flask server to make predictions.
 
 
 ## Application UI
-<!-- ![Homepage](https://github.com/Suman196pokhrel/Car_Price_prediction/blob/[branch]/image.jpg?raw=true"Title is optional") -->
+![Homepage](https://github.com/Suman196pokhrel/Car_Price_prediction/blob/master/ui_01.png?raw=true)
 
 
 
